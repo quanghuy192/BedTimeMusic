@@ -9,6 +9,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.qhuy.bedtimemusic.R;
 import com.qhuy.bedtimemusic.data.ListNameAccess;
@@ -18,6 +19,7 @@ public class MyDialog extends Dialog implements OnClickListener {
 	private Context context;
 	private EditText editText;
 	private Button positiveBtn, negativeBtn;
+	private ImageButton mp3;
 	private ListNameAccess listNameAc;
 
 	public MyDialog(Context context) {
@@ -35,8 +37,10 @@ public class MyDialog extends Dialog implements OnClickListener {
 		editText = (EditText) findViewById(R.id.addname);
 		positiveBtn = (Button) findViewById(R.id.positive);
 		negativeBtn = (Button) findViewById(R.id.negative);
+		mp3 = (ImageButton) findViewById(R.id.mp3Icon);
 		positiveBtn.setOnClickListener(this);
 		negativeBtn.setOnClickListener(this);
+		mp3.setOnClickListener(this);
 	}
 
 	@Override

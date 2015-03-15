@@ -23,6 +23,9 @@
     <string name="positive">Add</string>
     <string name="negative">Cancel</string>
     <string name="title">Add your list name</string>
+    <string name="name">Name</string>
+    <string name="song">Song</string>
+    <string name="calender">Calender</string>
     <string name="help">This is the BedtimeMusic application , version 1.0
                         1. Click the set time view to setup your time off .
                         2. Click the clock button to count down the time .

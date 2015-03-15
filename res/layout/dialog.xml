@@ -11,13 +11,55 @@
 
     <EditText
         android:id="@+id/addname"
-        android:layout_width="fill_parent"
-        android:layout_height="30dp" />
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:textSize="13sp"
+        android:hint="@string/name" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/addsong"
+            android:layout_width="170dp"
+            android:layout_height="35dp"
+            android:textSize="13sp"
+            android:hint="@string/song" />
+
+        <ImageButton
+            android:id="@+id/mp3Icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/mp3icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/addCalender"
+            android:layout_width="170dp"
+            android:layout_height="35dp"
+            android:textSize="13sp"
+            android:hint="@string/calender" />
+
+        <ImageButton
+            android:id="@+id/cldIcon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/calendar" />
+    </LinearLayout>
 
     <EditText
         android:id="@+id/note"
         android:layout_width="fill_parent"
-        android:layout_height="70dp"
+        android:layout_height="75dp"
+        android:textSize="13sp"
+        android:hint="@string/note"
         android:maxLines="3" />
 
     <LinearLayout
