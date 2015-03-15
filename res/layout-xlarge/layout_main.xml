@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black" >
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="49sp"
+        android:background="@drawable/panel_shape" >
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="141sp"
+            android:layout_height="49sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:entries="@array/set_time" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/layout1"
+        android:layout_below="@id/layout1"
+        android:layout_marginTop="23sp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="23dp"
+            android:text="@string/hour"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/minute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/hour"
+            android:layout_marginLeft="27sp"
+            android:text="@string/minutes"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19dp"
+            android:layout_toRightOf="@id/minute"
+            android:text="@string/seconds"
+            android:textColor="@color/blue" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout2"
+        android:layout_marginTop="7dp" >
+
+        <TextView
+            android:id="@+id/set_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="13dp"
+            android:text="@string/time_default"
+            android:textColor="@color/blue"
+            android:textSize="52sp" />
+
+        <ImageView
+            android:id="@+id/clock"
+            android:layout_width="59sp"
+            android:layout_height="59sp"
+            android:layout_alignTop="@id/set_time"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="23dp"
+            android:src="@drawable/selector_button" />
+
+        <TextView
+            android:id="@+id/textSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/set_time"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="13dp"
+            android:singleLine="true"
+            android:text="Beautiful in White"
+            android:textColor="@color/blue"
+            android:textSize="29sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/artistSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textSong"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="13dp"
+            android:singleLine="true"
+            android:text="Shane Filan"
+            android:textColor="@color/blue"
+            android:textSize="19sp"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mid_layout"
+        android:layout_marginTop="11sp" >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="13dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="23dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:src="@drawable/music_player_logo" />
+
+        <ImageView
+            android:id="@+id/btnRepeat"
+            android:layout_width="37sp"
+            android:layout_height="37sp"
+            android:layout_marginLeft="13dp"
+            android:layout_toRightOf="@id/imageView"
+            android:layout_alignTop="@id/imageView"
+            android:src="@drawable/btn_repeat"
+            />
+
+        <ImageView
+            android:id="@+id/btnShuffle"
+            android:layout_width="37sp"
+            android:layout_height="37sp"
+            android:layout_marginLeft="13dp"
+            android:layout_toRightOf="@id/imageView"
+            android:layout_below="@id/btnRepeat"
+            android:layout_marginTop="13dp"
+            android:src="@drawable/btn_shuffle" />
+
+        <ImageView
+            android:id="@+id/list"
+            android:layout_width="37sp"
+            android:layout_height="37sp"
+            android:layout_marginLeft="13dp"
+            android:layout_toRightOf="@id/imageView"
+            android:layout_below="@id/btnShuffle"
+            android:layout_marginTop="43dp"
+            android:src="@drawable/btn_playlist" />
+
+        <TextView
+            android:id="@+id/current_time_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/imageView"
+            android:layout_below="@id/imageView"
+            android:layout_marginTop="17sp"
+            android:text="00:00"
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/progress"
+            android:layout_width="210sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_toRightOf="@id/current_time_txt"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="11dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/total_time_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_toRightOf="@id/progress"
+            android:layout_marginTop="17dp"
+            android:layout_marginLeft="7dp"
+            android:text="00:00"
+            android:textColor="@color/blue"
+            android:textStyle="bold" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/progress"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/panel_shape" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/btn_previous_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13sp"
+                    android:layout_toLeftOf="@+id/btn_backward_imagview"
+                    android:src="@drawable/ic_media_previous" />
+
+                <ImageView
+                    android:id="@id/btn_backward_imagview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="13sp"
+                    android:layout_toLeftOf="@+id/btn_play_imageview"
+                    android:src="@drawable/ic_media_rew" />
+
+                <ImageView
+                    android:id="@id/btn_play_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_media_play" />
+
+                <ImageView
+                    android:id="@+id/btn_forward_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13sp"
+                    android:layout_toRightOf="@id/btn_play_imageview"
+                    android:src="@drawable/ic_media_rew" />
+
+                <ImageView
+                    android:id="@+id/btn_next_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13sp"
+                    android:layout_toRightOf="@id/btn_forward_imageview"
+                    android:src="@drawable/ic_media_next" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

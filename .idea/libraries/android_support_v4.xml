@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="android-support-v4">
+    <CLASSES>
+      <root url="jar://E:/StartAppSearchBox-1.0.4.jar!/" />
+      <root url="jar://E:/StartAppInApp-2.2.2.jar!/" />
+      <root url="jar://E:/StartAppCommon-1.0.1.jar!/" />
+      <root url="jar://E:/BedTimeMusic/libs/android-support-v4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
