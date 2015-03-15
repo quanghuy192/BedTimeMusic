@@ -26,7 +26,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.qhuy.bedtimemusic.R;
-import com.qhuy.bedtimemusic.activity.CurrentActivity;
+import com.qhuy.bedtimemusic.activity.MainActivity;
 import com.qhuy.bedtimemusic.data.MusicAccessDatabase;
 import com.qhuy.bedtimemusic.utilities.Utilities;
 
@@ -154,7 +154,7 @@ public class PlayerService extends Service implements OnClickListener,
 	private void setCurrentListSong(int keyId) {
 		// TODO Auto-generated method stub
 		if (keyId == 1) {
-			songsListingSD = CurrentActivity.songsList;
+			songsListingSD = MainActivity.songsList;
 		} else {
 			songsListingSD = songsListFavorite;
 		}
@@ -200,20 +200,20 @@ public class PlayerService extends Service implements OnClickListener,
 			songsListFavorite = readList.getList();
 			readList.close();
 
-			textSong = CurrentActivity.text;
-			mTextTime = CurrentActivity.mSetTime;
+			textSong = MainActivity.text;
+			mTextTime = MainActivity.mSetTime;
 
-			songCurrentDurationLabel = CurrentActivity.songCurrentDurationLabel;
+			songCurrentDurationLabel = MainActivity.songCurrentDurationLabel;
 
-			songTotalDurationLabel = CurrentActivity.songTotalDurationLabel;
-			progress = CurrentActivity.progress;
-			reload = CurrentActivity.reload;
-			shuffle = CurrentActivity.shuffle;
-			play = CurrentActivity.play;
-			next = CurrentActivity.next;
-			privious = CurrentActivity.privious;
-			btnForward = CurrentActivity.btnForward;
-			btnBackward = CurrentActivity.btnBackward;
+			songTotalDurationLabel = MainActivity.songTotalDurationLabel;
+			progress = MainActivity.progress;
+			reload = MainActivity.reload;
+			shuffle = MainActivity.shuffle;
+			play = MainActivity.play;
+			next = MainActivity.next;
+			privious = MainActivity.privious;
+			btnForward = MainActivity.btnForward;
+			btnBackward = MainActivity.btnBackward;
 
 			mTextTime.setOnClickListener(this);
 			reload.setOnClickListener(this);
@@ -537,7 +537,7 @@ public class PlayerService extends Service implements OnClickListener,
 		Context context = getApplicationContext();
 		CharSequence songName = songsListingSD.get(songIndex).get("songTitle");
 
-		Intent notificationIntent = new Intent(this, CurrentActivity.class);
+		Intent notificationIntent = new Intent(this, MainActivity.class);
 		/*
 		 * PendingIntent contentIntent = PendingIntent.getActivity(context, 0,
 		 * notificationIntent, 0);

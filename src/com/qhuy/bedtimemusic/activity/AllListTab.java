@@ -47,7 +47,7 @@ public class AllListTab extends Fragment {
 		 * */
 
 		try {
-			listSong = CurrentActivity.songsList;
+			listSong = MainActivity.songsList;
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
