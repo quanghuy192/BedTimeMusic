@@ -26,7 +26,7 @@ import com.qhuy.bedtimemusic.data.Music;
 import com.qhuy.bedtimemusic.data.MusicAccessDatabase;
 import com.qhuy.bedtimemusic.service.PlayerService;
 
-public class CurrentListSong extends Fragment {
+public class AllListTab extends Fragment {
 
 	private ListView listview;
 	private ArrayAdapter<Music> adapter;

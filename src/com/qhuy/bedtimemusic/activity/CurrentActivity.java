@@ -171,10 +171,10 @@ public class CurrentActivity extends Activity implements
 		}
 		cancelNotification();
 
-		if (CurrentListSong.playerService != null) {
-			stopService(CurrentListSong.playerService);
+		if (AllListTab.playerService != null) {
+			stopService(AllListTab.playerService);
 		} else {
-			stopService(FavoriteList.playerService);
+			stopService(FavoriteTab.playerService);
 		}
 	}
 

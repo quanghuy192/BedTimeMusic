@@ -44,7 +44,7 @@ public class MainActivity extends FragmentActivity {
 				R.layout.tabs_bg, R.drawable.list);
 		fragmentTabHost.addTab(
 				fragmentTabHost.newTabSpec("List").setIndicator(listView),
-				CurrentListSong.class, null);
+				AllListTab.class, null);
 
 		/**
 		 * 
@@ -55,7 +55,18 @@ public class MainActivity extends FragmentActivity {
 		View favoriteListView = CreateView(fragmentTabHost.getContext(),
 				R.layout.tabs_bg, R.drawable.heart);
 		fragmentTabHost.addTab(fragmentTabHost.newTabSpec("Favorite List")
-				.setIndicator(favoriteListView), FavoriteList.class, null);
+				.setIndicator(favoriteListView), FavoriteTab.class, null);
+		
+		/**
+		 * 
+		 * List favorite list 
+		 * 
+		 * */
+		
+		View listFavorite = CreateView(fragmentTabHost.getContext(),
+				R.layout.tabs_bg, R.drawable.list);
+		fragmentTabHost.addTab(fragmentTabHost.newTabSpec("Your List")
+				.setIndicator(listFavorite), NoteTab.class, null);
 		
 		}
 	

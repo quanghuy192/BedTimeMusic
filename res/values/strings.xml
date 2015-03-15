@@ -19,12 +19,15 @@
     <string name="note">Type your note</string>
     <string name="alarm_add">Add</string>
     <string name="savebtn">Save</string>
+    <string name="addbtn">Add new list</string>
+    <string name="positive">Add</string>
+    <string name="negative">Cancel</string>
+    <string name="title">Add your list name</string>
     <string name="help">This is the BedtimeMusic application , version 1.0
                         1. Click the set time view to setup your time off .
                         2. Click the clock button to count down the time .
                         3. You can add you favorite music to your favorite list .
-                        4. you con play music go on arter , time off . 
-                         </string>
+                        4. you con play music go on arter , time off . </string>
 
     <string-array name="set_time">
         <item> SET TIME </item>

@@ -27,7 +27,7 @@ import com.qhuy.bedtimemusic.data.Music;
 import com.qhuy.bedtimemusic.data.MusicAccessDatabase;
 import com.qhuy.bedtimemusic.service.PlayerService;
 
-public class FavoriteList extends Fragment {
+public class FavoriteTab extends Fragment {
 
 	private ListView favoriteList;
 	private ArrayAdapter<Music> adapter;

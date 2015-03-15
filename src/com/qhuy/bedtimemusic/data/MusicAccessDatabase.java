@@ -12,17 +12,17 @@ import java.util.HashMap;
 
 public class MusicAccessDatabase {
 
-	private MusicListDatabase dataList;
+	private Database dataList;
 	private SQLiteDatabase dataBase;
-	private String[] listColumn = { MusicListDatabase.KEY_ID, MusicListDatabase.PATH_NAME,
-			MusicListDatabase.SONG_NAME, MusicListDatabase.ARTIST_NAME };
+	private String[] listColumn = { Database.KEY_ID, Database.PATH_NAME,
+			Database.SONG_NAME, Database.ARTIST_NAME };
 
 	public static ArrayList<HashMap<String, String>> songListDB;
 
 	// Constructor
 	public MusicAccessDatabase(Context context) {
 		// TODO Auto-generated constructor stub
-		dataList = new MusicListDatabase(context);
+		dataList = new Database(context);
 	}
 
 	public void openToRead() {
@@ -57,7 +57,7 @@ public class MusicAccessDatabase {
 	// Get list favorite
 	public ArrayList<HashMap<String, String>> getList() {
 		songListDB = new ArrayList<HashMap<String, String>>();
-		Cursor listCursor = dataBase.query(MusicListDatabase.DATABASE_LIST, listColumn,
+		Cursor listCursor = dataBase.query(Database.DATABASE_LIST, listColumn,
 				null, null, null, null, null);
 		listCursor.moveToFirst();
 
@@ -108,11 +108,11 @@ public class MusicAccessDatabase {
 		 * 
 		 * */
 
-		contentValue.put(MusicListDatabase.PATH_NAME, currentMusic.getSongPath());
+		contentValue.put(Database.PATH_NAME, currentMusic.getSongPath());
 		Log.i("TAG", currentMusic.getSongPath());
-		contentValue.put(MusicListDatabase.SONG_NAME, currentMusic.getSongTitle());
+		contentValue.put(Database.SONG_NAME, currentMusic.getSongTitle());
 		Log.i("TAG", currentMusic.getSongTitle());
-		contentValue.put(MusicListDatabase.ARTIST_NAME, currentMusic.getSongArtist());
+		contentValue.put(Database.ARTIST_NAME, currentMusic.getSongArtist());
 		Log.i("TAG", currentMusic.getSongArtist());
 
 		/**
@@ -121,9 +121,9 @@ public class MusicAccessDatabase {
 		 * 
 		 * */
 
-		long id = dataBase.insert(MusicListDatabase.DATABASE_LIST, null, contentValue);
-		Cursor cursor = dataBase.query(MusicListDatabase.DATABASE_LIST, listColumn,
-				MusicListDatabase.KEY_ID + "=" + id, null, null, null, null);
+		long id = dataBase.insert(Database.DATABASE_LIST, null, contentValue);
+		Cursor cursor = dataBase.query(Database.DATABASE_LIST, listColumn,
+				Database.KEY_ID + "=" + id, null, null, null, null);
 		cursor.moveToFirst();
 		Log.i("TAG", String.valueOf(cursor.getLong(0)));
 		Log.i("TAG", cursor.getString(1));
@@ -141,7 +141,7 @@ public class MusicAccessDatabase {
 
 	public void remove(Music currentMusic) {
 		long id = currentMusic.getId();
-		dataBase.delete(MusicListDatabase.DATABASE_LIST, MusicListDatabase.KEY_ID + "=" + id,
+		dataBase.delete(Database.DATABASE_LIST, Database.KEY_ID + "=" + id,
 				null);
 	}
 
@@ -152,7 +152,7 @@ public class MusicAccessDatabase {
 	 * */
 
 	public void removeAll() {
-		dataBase.delete(MusicListDatabase.DATABASE_LIST, null, null);
+		dataBase.delete(Database.DATABASE_LIST, null, null);
 	}
 
 }
